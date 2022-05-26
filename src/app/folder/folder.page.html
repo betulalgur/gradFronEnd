@@ -1,0 +1,40 @@
+<ion-content [fullscreen]="true">
+
+  
+
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-card-subtitle></ion-card-subtitle>
+          <ion-icon name="people"></ion-icon>
+
+          <ion-card-title>EMU Covid Tracker</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content >
+          Brief info about the application
+        </ion-card-content>
+      </ion-card>
+
+
+      <ion-card>
+        <ion-card-content>
+          <ion-item class="background_clear">
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+    <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login</ion-button> 
+    <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/staff']" routerLinkActive="router-link-active" >Staff login *temporary**</ion-button> 
+    <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Admin login *temporary**</ion-button> 
+
+
+
+    <ion-button class="signup" expand="full" fill="clear" [routerLink]="['/detail-sign']" routerLinkActive="router-link-active"  >Don't have an account yet? Sign Up</ion-button>
+  
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/folder/:id']" routerLinkActive="router-link-active"  class="back" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-chip>
+    <ion-avatar >
+      <img class="profile_pic" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+  </ion-chip>
+
+  <ion-card>
+    <ion-item href="#" >
+      <ion-icon></ion-icon>
+      <ion-label>*** KİŞİNİN İSMİ GELECEK***</ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon></ion-icon>
+      <ion-label>****TYPE GELECEK***</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      TEST RESULT : ***BURAYA RESULT ÇEKİLECEK***
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      last test update time: ***test yükleyeli ne kadar oldu bilgisi gelecek***
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button color="light" class="center" [routerLink]="['/test-upload']" routerLinkActive="router-link-active" >Enter new test result</ion-button>
+
+  <ion-button class="center" color="danger"  [routerLink]="['/student-list']" routerLinkActive="router-link-active" >Show Student List</ion-button>
+
+
+
+
+</ion-content>

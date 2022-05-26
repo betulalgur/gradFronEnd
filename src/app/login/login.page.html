@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/folder/:id']" routerLinkActive="router-link-active"  class="back" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+    <ion-avatar class="profile_pic">
+      <img class="profile_pic" [routerLink]="['/profile-detail-student']" routerLinkActive="router-link-active"   src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsupport.hubstaff.com%2Fprofile-pictures-for-hubstaff-talent%2F&psig=AOvVaw342B_fobJX9s_O1QWUpFxl&ust=1652882798434000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJiF6rXa5vcCFQAAAAAdAAAAABAD">
+    </ion-avatar>
+ 
+
+  <ion-card>
+    <ion-item href="#" >
+      <ion-icon></ion-icon>
+      <ion-label>*** KİŞİNİN İSMİ GELECEK***</ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon></ion-icon>
+      <ion-label>****NUMARASI GELECEK***</ion-label>
+    </ion-item>
+  
+    <ion-item href="#">
+      <ion-icon></ion-icon>
+      <ion-label>****TYPE GELECEK***</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      TEST RESULT : ***BURAYA RESULT ÇEKİLECEK***
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      last test update time: ***test yükleyeli ne kadar oldu bilgisi gelecek***
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <ion-button color="danger" class="center" [routerLink]="['/test-upload']" routerLinkActive="router-link-active" >Enter new test result</ion-button>
+
+
+
+
+
+</ion-content>
