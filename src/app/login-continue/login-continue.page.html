@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/detail-sign']" routerLinkActive="router-link-active"  class="back" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+ 
+
+
+  <ion-item>
+    <ion-label >Select Your Courses</ion-label>
+    <ion-select multiple="true" cancelText="Cancel" okText="Save">
+      <ion-select-option *ngFor="let data of datas">{{data.type}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-card>
+
+
+  </ion-card>
+
+  <div>
+    <ion-button shape="round" expand="full" color="secondary"  id="trigger-button">Sign-In</ion-button>
+<ion-popover trigger="trigger-button">
+  <ng-template>
+    <ion-content class="ion-text-center"> Sign-In is Successfull !</ion-content>
+  </ng-template>
+</ion-popover>
+  </div>
+
+  
+  <ion-button color="danger" expand="block" fill="clear"  [routerLink]="['/folder/:id']" routerLinkActive="router-link-active" >Home Page</ion-button>
+
+ 
+  
+
+
+</ion-content>
