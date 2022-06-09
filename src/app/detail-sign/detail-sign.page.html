@@ -9,20 +9,41 @@
 <ion-content>
   
 
-  <ion-item>
+  <ion-item ><div style="color:chocolate;">Email</div>
     <ion-label  position="floating">
 
       <ion-icon name="mail-outline"></ion-icon>
         </ion-label>
     
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="email" ></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      <ion-icon name="key-outline"></ion-icon>
+  
+  <ion-item><div style="color:chocolate;">Password</div>
+    <ion-label position="floating" class="ion-text-left">
+      <ion-icon name="key-outline" ></ion-icon>
     </ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="password"></ion-input>
   </ion-item>
-  <ion-button color='light' shape='round' class="login" expand="full">Sign-up</ion-button> 
+  
+  <ion-item> <div style="color:chocolate;">Name</div>
+    <ion-label position="floating">
+      <ion-icon name="accessibility-outline"></ion-icon>
+    </ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item> <div style="color:chocolate;">Surname</div>
+    <ion-label position="floating">
+      <ion-icon name="accessibility-outline"></ion-icon>
+    </ion-label>
+    <ion-input [(ngModel)]="surname"></ion-input>
+  </ion-item>
+  <ion-button [routerLink]="['/login-continue']" routerLinkActive="router-link-active" 
+  color='light' shape='round' class="login" expand="full">Continue</ion-button> 
+  
+  {{password}}
+  {{email}}
+  {{name}}
+  {{surname}}
+ 
 
 </ion-content>

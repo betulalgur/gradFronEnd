@@ -7,11 +7,6 @@
 </ion-header>
 
 <ion-content>
-
-  
-    <ion-avatar class="profile_pic">
-      <img class="profile_pic" [routerLink]="['/profile-detail-student']" routerLinkActive="router-link-active"   src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsupport.hubstaff.com%2Fprofile-pictures-for-hubstaff-talent%2F&psig=AOvVaw342B_fobJX9s_O1QWUpFxl&ust=1652882798434000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCJiF6rXa5vcCFQAAAAAdAAAAABAD">
-    </ion-avatar>
  
 
   <ion-card>
@@ -20,31 +15,54 @@
       <ion-label>*** KİŞİNİN İSMİ GELECEK***</ion-label>
     </ion-item>
   
-    <ion-item href="#">
-      <ion-icon></ion-icon>
-      <ion-label>****NUMARASI GELECEK***</ion-label>
-    </ion-item>
-  
-    <ion-item href="#">
-      <ion-icon></ion-icon>
-      <ion-label>****TYPE GELECEK***</ion-label>
-    </ion-item>
+    
   </ion-card>
 
+
+<div>
+
   <ion-card>
-    <ion-card-content>
-      TEST RESULT : ***BURAYA RESULT ÇEKİLECEK***
+    <ion-card-content> <div class="ion-text-left"> TEST RESULT : </div>
+      <div *ngIf="status==='Positive'"> 
+        
+        <ion-badge color="danger"> {{status}} </ion-badge>
+      </div>
+
+      <div *ngIf="status==='Negative'"> 
+        
+        <ion-badge color="success"> {{status}} </ion-badge>
+      </div>
+
     </ion-card-content>
   </ion-card>
 
   <ion-card>
-    <ion-card-content>
-      last test update time: ***test yükleyeli ne kadar oldu bilgisi gelecek***
+    <ion-card-content >last test update time:
+      <div class="lut">  {{date}} </div>
+
     </ion-card-content>
   </ion-card>
   
+</div>
   
-  <ion-button color="danger" class="center" [routerLink]="['/test-upload']" routerLinkActive="router-link-active" >Enter new test result</ion-button>
+
+
+
+  <ion-item>
+    <ion-label>Select Courses</ion-label>
+    <ion-select multiple="true" cancelText="Cancel" okText="Save">
+      <ion-select-option *ngFor="let data of datas">{{data.type}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card>
+
+  </ion-card>
+
+ 
+  
+  
+  <ion-button  color="secondary" expand="block" [routerLink]="['/test-upload']" routerLinkActive="router-link-active" >Update test result</ion-button>
 
 
 

@@ -11,16 +11,41 @@
 
   
     <div class="text_center">
-      Please set how many days apart the test results will be uploaded
+     SETTINGS
+      
     </div>
+
+    <ion-card>
+      
+    </ion-card>
+    <div> 
+      <ion-item>
+        <ion-label>Change Messages</ion-label>
+        <ion-select [(ngModel)]="message" multiple="false" cancelText="Cancel" okText="Save"
+        routerLinkActive="router-link-active" >
+          <ion-select-option value="Please Do not forget to drink water">Do not forget to drink water</ion-select-option>
+          <ion-select-option value="For your health, please observe social distancing.">For your health, please observe social distancing.</ion-select-option>
+          <ion-select-option value="Please get tested if you have symptoms of Covid-19">Please get tested if you have symptoms of Covid-19</ion-select-option>
+          <ion-select-option value="peppers">4 DAY</ion-select-option>
+          <ion-select-option value="mushrooms">5 DAY</ion-select-option>
+          <ion-select-option value="onions">6 DAY</ion-select-option>
+          <ion-select-option value="pepperoni">7 DAY</ion-select-option>
+          <ion-select-option value="pineapple">8 DAY</ion-select-option>
+          <ion-select-option value="sausage">9 DAY</ion-select-option>
+          <ion-select-option value="Spinach">10+ DAY</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </div>
+
    <ion-card>
     
   </ion-card>
 
   <ion-item>
     <ion-label>Set Time</ion-label>
-    <ion-select multiple="true" cancelText="Cancel" okText="Save">
-      <ion-select-option value="bacon">1 DAY</ion-select-option>
+    <ion-select multiple="false" cancelText="Cancel" okText="Save">
+      <ion-select-option  value="1">1 DAY</ion-select-option>
       <ion-select-option value="olives">2 DAY</ion-select-option>
       <ion-select-option value="xcheese">3 DAY</ion-select-option>
       <ion-select-option value="peppers">4 DAY</ion-select-option>
@@ -37,8 +62,9 @@
   </ion-card>
   
 
-  <ion-button expand="block" class="full_button" color="medium">Save</ion-button>
+  <ion-button [routerLink]="['/folder', message]" routerLinkActive="router-link-active" expand="block" class="full_button" color="medium">Save</ion-button>
 
+  
 
 
 

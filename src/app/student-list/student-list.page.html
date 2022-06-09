@@ -7,33 +7,14 @@
 </ion-header>
 
 <ion-content>
-
-  <ion-card>
-
-    <ion-card-content>
-      <ion-card-title>***DERS ADI***</ion-card-title>
-      <ion-progress-bar value="0.9" buffer="0.5"></ion-progress-bar>
-
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            ion-col
-          </ion-col>
-          <ion-col>
-            ion-col
-          </ion-col>
-          <ion-col>
-            ion-col
-          </ion-col>
-          <ion-col>
-            ion-col
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-
-  </ion-card>
-
+  
+  <ion-list>
+    <ion-item color="warning" > Student List </ion-item>
+    <ion-item  *ngFor="let data of datas">
+      <ion-label> {{data.username}} </ion-label>
+      <ion-label> {{data.type}} </ion-label>
+    </ion-item>
+  </ion-list>
 
   
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-detail-sign',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailSignPage implements OnInit {
 
+  public email:any;
+  public password:any;
+  public name:any;
+  public surname:any;
+  
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

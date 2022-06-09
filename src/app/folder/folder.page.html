@@ -11,7 +11,10 @@
         </ion-card-header>
       
         <ion-card-content >
-          Brief info about the application
+          
+
+          <div class="messageShow"> DEVELOPED BY DEATH HACK TEAMmmm  {{message}} </div> 
+
         </ion-card-content>
       </ion-card>
 
@@ -19,22 +22,24 @@
       <ion-card>
         <ion-card-content>
           <ion-item class="background_clear">
-            <ion-label position="floating">E-mail</ion-label>
-            <ion-input></ion-input>
+            <ion-label position="floating">E-mail </ion-label>
+            <ion-input  [(ngModel)]="entered_email" ></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="floating">Password</ion-label>
-            <ion-input></ion-input>
+            <ion-input [(ngModel)]="entered_password"></ion-input>
           </ion-item>
         </ion-card-content>
       </ion-card>
 
-    <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login</ion-button> 
-    <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/staff']" routerLinkActive="router-link-active" >Staff login *temporary**</ion-button> 
+
+    <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/login/:id']" routerLinkActive="router-link-active" >Login</ion-button> 
+    <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/staff/:id']" routerLinkActive="router-link-active" >Staff login *temporary**</ion-button> 
     <ion-button color='light' shape='round' class="login" expand="full" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Admin login *temporary**</ion-button> 
 
 
 
     <ion-button class="signup" expand="full" fill="clear" [routerLink]="['/detail-sign']" routerLinkActive="router-link-active"  >Don't have an account yet? Sign Up</ion-button>
   
+    
 </ion-content>

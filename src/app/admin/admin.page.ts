@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPage implements OnInit {
 
+  public message:any;
   constructor() { }
 
   ngOnInit() {
+
+    
   }
 
 }
